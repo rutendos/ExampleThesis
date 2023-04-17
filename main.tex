@@ -1,0 +1,216 @@
+%%%%%%%%%%%%
+%% Please rename this main.tex file and the output PDF to
+%% [lastname_firstname_graduationyear]
+%% before submission.
+%%
+%% ----------------------------------------------------------------------------------------
+%% This template is from CalTech and was modified and passed along 
+%% from Cody Glickman -> Janet Seibert -> Mayla Bogulas -> Rutendo Sigauke
+%%
+%% Check with the CU Anschutz guidelines for changes to their thesis document requirements
+%% LAST EDIT: 2023-April
+%% ----------------------------------------------------------------------------------------
+%%%%%%%%%%%%
+
+\documentclass[12pt]{caltech_thesis}
+\usepackage[hyphens]{url}
+\usepackage[all]{nowidow}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{indentfirst}
+\usepackage{placeins}
+\usepackage{longtable}
+\usepackage{listings}
+\usepackage{hyperref}
+\hypersetup{pdfborder=0 0 0}
+\usepackage{color}
+\usepackage{array}
+
+
+\graphicspath{ {./figures/} }
+
+%% Tentative: newtx for better-looking Times
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{newtxtext,newtxmath}
+
+
+% Must use biblatex to produce the Published Contents and Contributions, per-chapter bibliography (if desired), etc.
+\usepackage[
+    backend=biber,natbib,sort&compress,
+    % IMPORTANT: load a style suitable for your discipline
+    style=nejm,
+    doi=false,
+    url=false,
+    eprint=false,
+    isbn=false,
+    sorting=none
+]{biblatex}
+
+% Name of your .bib file(s)
+\addbibresource{references.bib}
+
+%For more details, see https://codydunne.blogspot.com/2012/01/suppressing-bibtex-fields-for-specific.html
+\AtEveryBibitem{% Clean up the bibtex rather than editing it
+ %\clearlist{address}
+ \clearfield{note}
+
+}
+
+
+\usepackage{titlecaps}
+\usepackage{subfiles}
+\usepackage{float}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{amsmath}
+\renewcommand\topfraction{.9}
+\renewcommand\textfraction{0.35}
+\renewcommand\floatpagefraction{0.8}
+\begin{document}
+\DoubleSpacing
+\frontmatter
+\setbeforesecskip{0in}
+\setbeforesubsecskip{0in}
+\setbeforesubsubsecskip{0in}
+
+\setaftersecskip{1sp}
+\setaftersubsecskip{1sp}
+\setaftersubsubsecskip{1sp}
+
+\begin{center}
+\pagenumbering{roman}
+
+\thispagestyle{empty}
+\vspace{.5in}
+\uppercase{TITLE} 
+
+
+by \par
+\uppercase{First Middle LastName} \par
+B.S., University of Oregon, 2015 \par
+\vspace{2.5in}
+
+
+A thesis submitted to the \par
+Faculty of the Graduate School of the University of Colorado in partial\par fulfillment of the requirements for the degree of\par
+Doctor of Philosophy\par
+Computational Bioscience Program\par
+2023
+
+
+
+\end{center}
+
+%FINAL APPROVAL OF THESIS!!!
+\newpage
+
+\par\par  
+\begin{center}
+\vspace{2in}
+This thesis for the Doctor of Philosophy degree by \par
+First Middle LastName \par
+has been approved for the Computational Bioscience Program \par
+\vspace{1in}
+by\par
+\vspace{1.5in}
+First LastName, Chair\par 
+First LastName, Advisor\par 
+First LastName \par
+First LastName \par
+First LastName \par
+\end{center}
+\vspace{.75in}
+\hspace{4in}Date:  May 19, 2023 %%This is the last day of the semester you are graduating in
+
+
+
+\newpage
+%\begin{abstract}
+\begin{flushleft}
+LastName, First Middle (Ph.D., Computational Bioscience Program)
+
+Title
+
+Thesis directed by Professor First LastName
+\end{flushleft}
+\vspace{-2em}
+\begin{center}\textbf{ABSTRACT}\end{center}
+\vspace{-2em}
+\begin{flushleft}
+
+%placeholder text
+\lipsum[1]
+
+\lipsum[2]
+
+\lipsum[3]
+\end{flushleft}
+
+
+
+\begin{flushright}
+The form and content of this abstract are approved. We recommend its publication.\par
+
+Approved: First LastName %%advisors name here
+\end{flushright}
+%\end{abstract}
+
+
+\newpage
+% \begin{center}\textbf{DEDICATION}\end{center}
+% \vspace{-2em}
+\begin{vplace}[0.7]
+\begin{flushleft}
+
+
+To someone special \\
+
+
+\end{flushleft}
+\end{vplace}
+
+\newpage
+\begin{center}\textbf{ACKNOWLEDGEMENTS}\end{center}
+\lipsum[1]
+\lipsum[2]
+\lipsum[7]
+
+\begin{KeepFromToc}
+  \tableofcontents
+  \listoftables
+  \listoffigures
+\end{KeepFromToc}
+
+\printnomenclature
+
+\mainmatter
+\raggedright
+\setlength\parindent{.5in}
+%JSCHANGE
+%\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
+%\renewcommand{\thesubsection}{\arabic{chapter}.\arabic{section}}   
+
+\renewcommand{\thesection}{}   
+\renewcommand{\thesubsection}{}   
+
+\renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}
+\renewcommand{\thetable}{\arabic{chapter}.\arabic{table}}   
+
+
+\chapter{INTRODUCTION}
+\subfile{chapters/chapter1}
+
+\chapter{SOME COOL DISTRIBUTION}
+\subfile{chapters/chapter2}
+
+\printbibliography[heading=bibintoc, title=REFERENCES]
+
+\appendix
+
+%\chapter{APPENDIX}
+%\subfile{chapters/appendix01}
+
+
+
+\end{document}

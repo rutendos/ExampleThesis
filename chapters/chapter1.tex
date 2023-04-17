@@ -1,0 +1,34 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{\subfix{figures/}}}
+
+\begin{document}
+
+\section{Section}
+
+\lipsum[2]\citep{mittelbach2004latex}
+
+\begin{figure}
+\centering
+ 
+  \includegraphics[width=0.5\linewidth]{ExampleThesis/figures/figure1.png}
+
+  \caption[Example figure 1 here.]{\textbf{Example figure 1 here.} \lipsum[1]}
+  
+\end{figure}
+
+\subsection{Subsection}
+\lipsum[3] \citep{vanrossum2010python}
+
+\begin{equation}
+\mathrm{r_{x,y}} = \frac{n\sum{x_iy_i}-\sum{x_i}\sum{y_i}}{\sqrt{n\sum {x^2_i}-(\sum{x_i})^2}\sqrt{n\sum{y_i^2}-(\sum{y_i})^2}}
+\end{equation}
+
+Here is a \textbf{list} of \textit{items} I want to highlight.
+
+\begin{itemize}
+    \item Item A
+    \item Item B
+    \item Item C
+\end{itemize}
+
+\end{document}

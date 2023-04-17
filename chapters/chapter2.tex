@@ -1,0 +1,38 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{\subfix{figures/}}}
+
+\begin{document}
+
+\section{Section}
+\lipsum[1]\citep{imambi2021pytorch}
+
+\lipsum[2]
+
+\lipsum[3]
+
+\begin{figure}
+\centering
+ 
+  \includegraphics[width=0.75\linewidth]{ExampleThesis/figures/figure2.png}
+
+  \caption[Example figure 2 here.]{\textbf{Example figure 2 here.} \lipsum[2]}
+  
+\end{figure}
+
+\lipsum[4]
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{p{0.3\linewidth} | p{0.6\linewidth}}
+    \hline 
+        \textbf{Column1} & \textbf{Column1} \\\hline
+        Day & Monday \\\hline 
+        Date & 17th \\\hline 
+        Month & April \\\hline 
+        Year & 2023\\\hline 
+    \end{tabular}
+    \caption{Example Table.}
+    \label{tab:table1}
+\end{table}
+
+\end{document}
